@@ -1,0 +1,139 @@
+* {
+  margin: 0;
+  padding: 0;
+  shape-rendering: crispedges;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Open Sans', sans-serif;
+  background-color: #ececec;
+  background-size: 64px 128px; 
+}
+
+.container {
+  padding: 20px;
+}
+
+#title {
+  text-align: center;
+  font-size: 2em;
+  padding: 20px;
+  padding-bottom: 10px;
+}
+
+#description {
+  text-align: center;
+  font-size: 20px;
+}
+
+.tooltip {
+  opacity: 0;
+  position: absolute;
+  pointer-events: none;
+  background-color: rgba(0,0,0,0.8);
+  color: white;
+  border-radius: 5px;
+  padding: 15px 30px;
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.tooltip p {
+  margin: 0;
+  padding: 0;
+}
+
+tspan {
+  fill: #000000a1;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+/* ********* */
+/* SlideMenu */
+/* ********* */
+
+.menu {
+  position: fixed;
+  display: flex;
+  left: 10px;
+  top: 10px;
+  z-index: 2147483647;
+  background: black;
+}
+
+.hamburger {
+  width: 36px;
+  padding: 5px;
+  cursor: pointer;
+  stroke: #3793e0;
+  transition: 1s stroke;
+}
+
+.js-change-color {
+  stroke: #cf2a2a
+}
+
+.navbar {
+  padding-left: 10px;
+  position: fixed;
+  background: white;
+  color: #2b3a42;
+  top: 55px;
+  left: 0;
+  width: 285px;
+  height: 100%;
+  z-index: 2147483646;
+  transform: translateX(-295px);
+  transition: .4s transform;
+  
+  ul {
+    list-style: none;
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: 600;
+  }
+  
+  li {
+    font-weight: 400;
+    margin-left: 10px;
+    margin-top: 10px;
+    font-size: 16px;
+  }
+  
+  a {
+    color: #64CAFF;
+    
+    &:visited {
+      color: #64CAFF;
+    }
+    
+    &:hover {
+      color: #00a8ff;
+    }
+  }
+}
+
+.nav-link {
+  text-decoration: none;
+  padding: 0 5px;
+  font-size: 12px;
+}
+
+.dark-bg {
+  background: #0000008c;
+  cursor: pointer;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  opacity : 0;
+  transition: .4s opacity;
+}
